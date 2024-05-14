@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: forestgreen;
+  }
+  
+  #gameCanvas {
+    border: 1px solid #000;
+  }
+  
+  @font-face {
+    font-family: 'score';
+    src: url('Font/Scoreboard-font.woff') format('woff'),
+         url('Font/Scoreboard-font.woff') format('woff');
+}
+
