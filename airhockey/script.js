@@ -169,21 +169,24 @@ if (
 
 // Resetar bollen efter ett mål på den sidan av plan där målet har gjorts
 function resetBall() {
-    // Kollar vilken sida som målet gjordes på 
-    const scoringSide = ballX <= goalWidth ? "Right" : "Left";
- 
-    // Resetar bollen till den sidan som släptt in mål
-    if (scoringSide === "Left") {
-      ballX = canvas.width - goalWidth - ballSize / 2 - 150; 
-    } else {
-      ballX = goalWidth + ballSize / 2 + 150;
-    }
- 
-    ballY = canvas.height / 2;
-    // gör så bollen står still efter att den resetar 
-    ballSpeedX = 0;
-    ballSpeedY = 0;
-  }
+   // Kollar vilken sida som målet gjordes på 
+  const scoringSide = ballX <= goalWidth ? "Right" : "Left";
+
+   // Resetar bollen till den sidan som släptt in mål
+  ballX = canvas.width / 2;
+  ballY = canvas.height / 2 - 10; 
+  
+  // gör så bollen står still efter att den resetar 
+  ballSpeedX = 0;
+  ballSpeedY = 0;
+
+  // Reset paddles to their initial positions
+  paddleLeftX = paddleXMargin;
+  paddleLeftY = (canvas.height - paddleHeight) / 2;
+  paddleRightX = canvas.width - paddleXMargin - paddleWidth;
+  paddleRightY = (canvas.height - paddleHeight) / 2;
+}
+
 
 // Event listeners för rörelsea av spelarna
 document.addEventListener('keydown', (e) => {
