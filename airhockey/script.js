@@ -109,8 +109,8 @@ if (
     const bounceAngle = normalizedRelativeIntersectY * Math.PI / 4; // 
   
     // Skickar iväg bollen i den kalkylerade riktningen
-    ballSpeedX = 5 * Math.cos(bounceAngle);
-    ballSpeedY = 5 * Math.sin(bounceAngle);
+    ballSpeedX = 8 * Math.cos(bounceAngle);
+    ballSpeedY = 8 * Math.sin(bounceAngle);
   
     // se till att bollen kolliderar med spelarna bra
     ballX = paddleLeftX + paddleWidth + ballSize / 2;
@@ -133,8 +133,8 @@ if (
     const bounceAngle = normalizedRelativeIntersectY * Math.PI / 4; // Max bounce angle of π/4 radians (45 degrees)
   
     // Skickar iväg bollen i den kalkylerade riktningen
-    ballSpeedX = -7 * Math.cos(bounceAngle);
-    ballSpeedY = 7 * Math.sin(bounceAngle);
+    ballSpeedX = -8 * Math.cos(bounceAngle);
+    ballSpeedY = 8 * Math.sin(bounceAngle);
   
     //  se till att bollen kolliderar med spelarna bra
     ballX = paddleRightX - ballSize / 2;
